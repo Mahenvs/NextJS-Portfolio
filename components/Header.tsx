@@ -11,7 +11,7 @@ const Header = () => {
         <Link href={"/"}>
           <h1 className="text-4xl font-semibold">
             Mahe
-            <span className="text-accent">.</span>
+            <span className="text-skin-base">.</span>
           </h1>
         </Link>
         <div className="hidden lg:flex items-center gap-8">

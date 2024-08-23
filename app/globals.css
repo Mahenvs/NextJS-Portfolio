@@ -18,14 +18,15 @@
   :root{        
     --text-color: rgb(250, 248, 248);
     --fill-color:rgb(20, 110, 180);
-    
+    --secondary-text-color:rgb(250, 248, 248);
   }
 .theme-red{
+
+    --fill-color: #f40746;
+    --hover-fill-color:#cd0a3e;
     --text-color: #f40746;
-    --fill-color: #cd0a3e;
+    --secondary-text-color:rgb(250, 248, 248);
+    --border-color:#f40746;
+    --secondary-border-color:#cd0a3e;
 }
-  .theme-green{
-    --text-color: "#00ff99",
-    --fill-color: "#00e187"
-  }
 }

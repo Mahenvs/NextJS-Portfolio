@@ -36,6 +36,8 @@ const config = {
       textColor:{
         skin:{
           base:"var(--text-color)",
+          secondary: "var(--secondary-text-color)",  // Adding secondary text color
+
           // light:"var(--text-light-color)",
           // color:"var(--second-color)",
         },
@@ -43,9 +45,17 @@ const config = {
       backgroundColor:{
         skin:{
           fill:"var(--fill-color)",
+          'hover-fill': "var(--hover-fill-color)",  // Adding hover-fill color
+          
           // fillBtn:"var(--fill-color-btn)",
           // indicator:"var(--fill-color-indicator)",
           // light:"var(--second-color)",
+        },
+      },
+      borderColor: {
+        skin: {
+          base: "var(--border-color)", // Custom border color
+          secondary: "var(--secondary-border-color)", // Optional secondary border color
         },
       },
       borderRadius: {

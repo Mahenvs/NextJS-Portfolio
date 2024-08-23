@@ -13,7 +13,7 @@ export default function Home() {
               <span className="text-xl">Software Developer</span>
               <h1 className="h1 ">
                 {"Hello I'm"} <br />{" "}
-                <span className="text-accent">Mahendra U</span>
+                <span className="text-skin-base">Mahendra U</span>
               </h1>
               <p className="max-w-[500px] mb-9 text-white/80">
               {`I'm a passionate Full Stack Developer with experience in building dynamic and responsive web applications.`}
@@ -31,7 +31,9 @@ export default function Home() {
                   <Social
                     containerStyles={"flex gap-6"}
                     iconStyles={
-                      "w-9 h-9 border border-accent rounded-full flex justify-center items-center text-accent text-base hover:bg-accent hover:text-primary hover:transition-all duration-500"
+                      // "border border-skin-base bg-primary text-primary hover:bg-skin-hover-fill hover:text-skin-secondary",
+                      "w-9 h-9 border border-skin-base rounded-full flex justify-center items-center text-skin-base text-base hover:bg-skin-hover-fill hover:text-skin-secondary hover:transition-all duration-500"
+                      // "w-9 h-9 border border-accent rounded-full flex justify-center items-center text-accent text-base hover:bg-accent hover:text-primary hover:transition-all duration-500"
                     }
                   />
                 </div>
