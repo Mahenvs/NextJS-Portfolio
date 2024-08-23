@@ -33,6 +33,21 @@ const config = {
         },
 
       },
+      textColor:{
+        skin:{
+          base:"var(--text-color)",
+          // light:"var(--text-light-color)",
+          // color:"var(--second-color)",
+        },
+      },
+      backgroundColor:{
+        skin:{
+          fill:"var(--fill-color)",
+          // fillBtn:"var(--fill-color-btn)",
+          // indicator:"var(--fill-color-indicator)",
+          // light:"var(--second-color)",
+        },
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",

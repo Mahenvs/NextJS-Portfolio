@@ -26,8 +26,8 @@ const Photo = () => {
               ease: "easeInOut",
             },
           }}
-          className="w-[278px] rounded-full ml-3 mt-1 h-[278px] xl:w-[498px]
-            xl:h-[498px] bg-primary absolute"
+          className="w-[278px] rounded-full ml-3 xl:ml-4 xl:mt-2.5  mt-2 h-[278px] xl:w-[478px]
+            xl:h-[478px] bg-primary absolute"
         >
           <Image
             src="/assets/self.JPG"
@@ -35,7 +35,7 @@ const Photo = () => {
             quality={100}
             fill
             alt=""
-            className="rounded-full object-contain mix-blend-lighten"
+            className="rounded-full object-cover p-[4px] mix-blend-dar"
           />
         </motion.div>
         <motion.svg
@@ -49,7 +49,7 @@ const Photo = () => {
             cx="253"
             cy="253"
             r="250"
-            stroke="#00ff99"
+            stroke="#f40746"
             strokeWidth={"4"}
             strokeLinecap={"round"}
             strokeLinejoin="round"
