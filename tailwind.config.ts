@@ -1,7 +1,7 @@
-import type { Config } from "tailwindcss"
+import type { Config } from "tailwindcss";
 
 const config = {
-  darkMode: ["class"],
+  darkMode: ["class"], // Enable dark mode by class
   content: [
     './pages/**/*.{ts,tsx}',
     './components/**/*.{ts,tsx}',
@@ -13,55 +13,46 @@ const config = {
     container: {
       center: true,
       padding: "15px",
-
-    }, screens: {
-      "sm": '640px',
-      "md ": '768px',
-      "lg": '960px',
-      "xl": "1200px",
+    },
+    screens: {
+      sm: '640px',
+      md: '768px',   // Fixed the extra space
+      lg: '960px',
+      xl: '1200px',
     },
     fontFamily: {
-      primary: "var(--font-jetbrainsMono)"
+      primary: "var(--font-jetbrainsMono)", // Use the custom font
     },
-
     extend: {
       colors: {
-        primary: "#1c1c22",
+        primary: "#1c1c22", // Primary background color
         accent: {
-          DEFAULT: "#00ff99",
-          hover: "#00e187"
-        },
-
-      },
-      textColor:{
-        skin:{
-          base:"var(--text-color)",
-          secondary: "var(--secondary-text-color)",  // Adding secondary text color
-
-          // light:"var(--text-light-color)",
-          // color:"var(--second-color)",
+          DEFAULT: "#00ff99", // Accent color default
+          hover: "#00e187", // Hover state for accent
         },
       },
-      backgroundColor:{
-        skin:{
-          fill:"var(--fill-color)",
-          'hover-fill': "var(--hover-fill-color)",  // Adding hover-fill color
-          
-          // fillBtn:"var(--fill-color-btn)",
-          // indicator:"var(--fill-color-indicator)",
-          // light:"var(--second-color)",
+      textColor: {
+        skin: {
+          base: "var(--text-color)", // Custom text color from CSS variables
+          secondary: "var(--secondary-text-color)", // Secondary text color
+        },
+      },
+      backgroundColor: {
+        skin: {
+          fill: "var(--fill-color)", // Custom background color
+          'hover-fill': "var(--hover-fill-color)", // Hover background color
         },
       },
       borderColor: {
         skin: {
-          base: "var(--border-color)", // Custom border color
-          secondary: "var(--secondary-border-color)", // Optional secondary border color
+          base: "var(--border-color)", // Primary border color
+          secondary: "var(--secondary-border-color)", // Secondary border color
         },
       },
       borderRadius: {
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
+        lg: "var(--radius)", // Large border radius
+        md: "calc(var(--radius) - 2px)", // Medium border radius
+        sm: "calc(var(--radius) - 4px)", // Small border radius
       },
       keyframes: {
         "accordion-down": {
@@ -74,12 +65,12 @@ const config = {
         },
       },
       animation: {
-        "accordion-down": "accordion-down 0.2s ease-out",
-        "accordion-up": "accordion-up 0.2s ease-out",
+        "accordion-down": "accordion-down 0.2s ease-out", // Accordion down animation
+        "accordion-up": "accordion-up 0.2s ease-out", // Accordion up animation
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
-} satisfies Config
+  plugins: [require("tailwindcss-animate")], // Animate plugin for animations
+} satisfies Config;
 
-export default config
+export default config;

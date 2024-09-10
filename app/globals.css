@@ -2,31 +2,71 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @layer base {
-  body{
-    @apply font-primary bg-primary text-white leading-loose
+  body {
+    @apply font-primary bg-primary text-white leading-loose;
   }
-  .h1{
+
+  .h1 {
     @apply text-[48px] xl:text-[80px] leading-[1.1] font-semibold;
   }
-  .h2{
+
+  .h2 {
     @apply text-[36px] xl:text-[48px] leading-[1.1] font-semibold;
-  }.h3{
+  }
+
+  .h3 {
     @apply text-[20px] xl:text-[24px] leading-[1.1] font-semibold;
   }
-  :root{        
-    --text-color: rgb(250, 248, 248);
-    --fill-color:rgb(20, 110, 180);
-    --secondary-text-color:rgb(250, 248, 248);
-  }
-.theme-red{
 
+  /* :root {        
+    --text-color: rgb(250, 248, 248);
+    --fill-color: rgb(20, 110, 180);
+    --secondary-text-color: rgb(250, 248, 248);
+  } */
+
+  /* Theme-specific variables */
+  .theme-red {
     --fill-color: #f40746;
-    --hover-fill-color:#cd0a3e;
+    --hover-fill-color: #cd0a3e;
     --text-color: #f40746;
-    --secondary-text-color:rgb(250, 248, 248);
-    --border-color:#f40746;
-    --secondary-border-color:#cd0a3e;
-}
+    --secondary-text-color: rgb(250, 248, 248);
+    --border-color: #f40746;
+    --secondary-border-color: #cd0a3e;
+    
+    --stroke-color: #f40746; /* Default stroke color */
+
+
+  }
+  .theme-blue1 {
+    --fill-color: rgb(25, 138, 223);
+    --hover-fill-color: rgb(20, 110, 180);
+    --text-color: rgb(25, 138, 223);
+    --secondary-text-color: rgb(250, 248, 248);
+    --border-color: rgb(25, 138, 223);
+    --secondary-border-color: rgb(20, 110, 180);
+    --stroke-color: #146eb4; /* Example blue stroke */
+
+
+  }
+
+  .theme-green {
+    --fill-color: #00ff99;
+    --hover-fill-color: #00e187;
+    --text-color: #00ff99;
+    --secondary-text-color: rgb(250, 248, 248);
+    --border-color: #00ff99;
+    --stroke-color: #00ff99;
+
+    --secondary-border-color: #00e187;
+  }
+  .theme-blue {
+    --fill-color: rgb(20, 110, 180); /* Blue color */
+    --hover-fill-color: rgb(18, 90, 150); /* Darker blue for hover */
+    --text-color: rgb(20, 110, 180); /* Blue text */
+    --secondary-text-color: rgb(250, 248, 248); /* Light secondary text */
+    --border-color: rgb(20, 110, 180); /* Blue border */
+    --secondary-border-color: rgb(18, 90, 150); /* Darker blue for secondary border */
+    --stroke-color: #146eb4; /* Example blue stroke */
+  }
 }
