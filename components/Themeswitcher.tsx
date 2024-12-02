@@ -11,23 +11,24 @@ const Themeswitcher = ({ children }: { children: React.ReactNode }) => {
   }, []);
   useEffect(() => {
     const timeout = setTimeout(() => {
+      // console.log(Math.random());
+      // console.log(Math.random() * 3);
+      // console.log(Math.floor(Math.random() * 3));
+      // console.log(Math.ceil(Math.random() * 3));
+
       const random = Math.floor(Math.random() * 3);
-      let themeGenerated = localStorage.setItem("theme", "red") ;
+      let themeGenerated = localStorage.setItem("theme", "red");
 
-      if(random == 0){
-        themeGenerated=  localStorage.setItem("theme", "red");
-
-      }
-      else if(random == 1){
-        themeGenerated =localStorage.setItem("theme", "blue");
-
-      }
-      else{
-        themeGenerated  =localStorage.setItem("theme", "green");
+      if (random == 0) {
+        themeGenerated = localStorage.setItem("theme", "red");
+      } else if (random == 1) {
+        themeGenerated = localStorage.setItem("theme", "blue");
+      } else {
+        themeGenerated = localStorage.setItem("theme", "green");
       }
       console.log("Theme set to red:", localStorage.getItem("theme"));
       setTheme(localStorage.getItem("theme"));
-    }, 10000);
+    }, 30000);
 
     // Clear timeout if the component unmounts
     return () => clearTimeout(timeout);

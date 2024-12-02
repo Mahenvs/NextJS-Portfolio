@@ -27,7 +27,6 @@ export default function RootLayout({
       <body className={jetbrainsMono.variable}>
         <Themeswitcher>
           <Header />
-          {/* <StairTransition/> */}
           <PageTransition>{children}</PageTransition>
         </Themeswitcher>
       </body>

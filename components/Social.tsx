@@ -8,20 +8,21 @@ const socials = [
   },
   {
     icon: <FaLinkedinIn />,
-    path: "https://www.linkedin.com/in/u-mahendra-082114174/",
+    path: "https://www.linkedin.com/in/mahendrau044/",
   },
 ];
 const Social = ({ containerStyles, iconStyles }) => {
-  return <div className={containerStyles}>
-    {socials.map((item,_) => {
+  return (
+    <div className={containerStyles}>
+      {socials.map((item, _) => {
         return (
-            <Link key={item.path} href={item.path}
-            className={iconStyles}>
-                {item.icon}
-            </Link>
-        )
-    })}
-  </div>;
+          <Link key={item.path} href={item.path} className={iconStyles}>
+            {item.icon}
+          </Link>
+        );
+      })}
+    </div>
+  );
 };
 
 export default Social;

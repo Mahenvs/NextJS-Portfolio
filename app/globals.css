@@ -33,10 +33,8 @@
     --secondary-text-color: rgb(250, 248, 248);
     --border-color: #f40746;
     --secondary-border-color: #cd0a3e;
-    
+    --shadow-color: #cd0a3e;
     --stroke-color: #f40746; /* Default stroke color */
-
-
   }
   .theme-blue1 {
     --fill-color: rgb(25, 138, 223);
@@ -46,8 +44,7 @@
     --border-color: rgb(25, 138, 223);
     --secondary-border-color: rgb(20, 110, 180);
     --stroke-color: #146eb4; /* Example blue stroke */
-
-
+    --shadow-color: rgb(20, 110, 180);
   }
 
   .theme-green {
@@ -57,7 +54,7 @@
     --secondary-text-color: rgb(250, 248, 248);
     --border-color: #00ff99;
     --stroke-color: #00ff99;
-
+    --shadow-color: rgb(250, 248, 248);
     --secondary-border-color: #00e187;
   }
   .theme-blue {
@@ -66,7 +63,29 @@
     --text-color: rgb(20, 110, 180); /* Blue text */
     --secondary-text-color: rgb(250, 248, 248); /* Light secondary text */
     --border-color: rgb(20, 110, 180); /* Blue border */
-    --secondary-border-color: rgb(18, 90, 150); /* Darker blue for secondary border */
+    --secondary-border-color: rgb(
+      18,
+      90,
+      150
+    ); /* Darker blue for secondary border */
     --stroke-color: #146eb4; /* Example blue stroke */
+    --shadow-color: rgb(18, 90, 150);
   }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 60s linear infinite ; /* Adjust duration as needed */
+}
+
+.overflow-hidden {
+  overflow: hidden;
 }

@@ -1,4 +1,5 @@
 import Photo from "@/components/Photo";
+import Skills from "@/components/Skills";
 import Social from "@/components/Social";
 import Stats from "@/components/Stats";
 import { Button } from "@/components/ui/button";
@@ -16,7 +17,7 @@ export default function Home() {
                 <span className="text-skin-base">Mahendra U</span>
               </h1>
               <p className="max-w-[500px] mb-9 text-white/80">
-              {`I'm a passionate Full Stack Developer with experience in building dynamic and responsive web applications.`}
+                {`I'm a passionate Full Stack Developer with experience in building dynamic and responsive web applications.`}
               </p>
               <div className="flex flex-col xl:flex-row items-center gap-8">
                 <Button
@@ -40,12 +41,14 @@ export default function Home() {
               </div>
             </div>
             <div className="order-1 xl:order-none mb-8 xl:mb-0">
-              <Photo/>
+              <Photo />
             </div>
           </div>
         </div>
-        
-        <Stats/>
+
+        <Stats />
+
+        <Skills />
       </section>
     </>
   );

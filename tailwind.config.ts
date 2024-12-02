@@ -54,6 +54,11 @@ const config = {
         md: "calc(var(--radius) - 2px)", // Medium border radius
         sm: "calc(var(--radius) - 4px)", // Small border radius
       },
+      boxShadow: {
+        md: "0 4px 6px -1px var(--shadow-color), 0 2px 4px -1px var(--shadow-color)", // Custom medium shadow
+        lg: "0 10px 15px -3px var(--shadow-color), 0 4px 6px -2px var(--shadow-color)", // Custom large shadow
+
+      },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },

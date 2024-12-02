@@ -1,4 +1,5 @@
 "use client";
+import { AnimatePresence,motion } from "framer-motion";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -23,6 +24,8 @@ export const links = [
 const Nav = () => {
     const pathName = usePathname()
   return (
+    // <AnimatePresence>
+    //   <motion.div>
     <nav className="flex gap-8">
       {links.map((link, index) => {
         return (
@@ -35,6 +38,8 @@ const Nav = () => {
         );
       })}
     </nav>
+    // </motion.div>
+    // </AnimatePresence>
   );
 };
 
