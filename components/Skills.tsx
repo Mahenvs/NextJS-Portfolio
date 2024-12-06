@@ -36,7 +36,7 @@ export default function Skills() {
                     align: "start",
                     loop: true,
                   }}
-                  className=" max-w-[20rem] ml-4 sm:w-full"
+                  className="sm:max-w-5xl max-w-[20rem] ml-4 sm:w-full"
                 >
                   <CarouselContent className="flex gap-4">
                     {currentSkills.map((skill) => (
