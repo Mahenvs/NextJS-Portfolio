@@ -3,7 +3,7 @@ import { Button } from "./ui/button";
 import { FiDownload } from "react-icons/fi";
 
 const ResumePopup = (title: { title: string }) => {
-  const [resumeUrl, setResumeUrl] = useState(null);
+  const [resumeUrl, setResumeUrl] = useState<string>("");
   const [showPopup, setShowPopup] = useState(false);
 
   const downloadResume = async () => {
