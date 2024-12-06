@@ -51,6 +51,7 @@
     --fill-color: #00ff99;
     --hover-fill-color: #00e187;
     --text-color: #00ff99;
+    /* --secondary-text-color: rgb(250, 248, 248); */
     --secondary-text-color: rgb(250, 248, 248);
     --border-color: #00ff99;
     --stroke-color: #00ff99;
@@ -83,7 +84,7 @@
 }
 
 .animate-scroll {
-  animation: scroll 60s linear infinite ; /* Adjust duration as needed */
+  animation: scroll 60s linear infinite; /* Adjust duration as needed */
 }
 
 .overflow-hidden {

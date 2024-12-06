@@ -1,92 +1,14 @@
 "use client";
-import React, { useEffect, useRef } from "react";
-import { FaAngular, FaNodeJs, FaPython, FaReact } from "react-icons/fa";
-import { IoLogoJavascript } from "react-icons/io";
 import {
-  SiDocker,
-  SiExpress,
-  SiMysql,
-  SiPostgresql,
-  SiShadcnui,
-  SiTailwindcss,
-  SiTwilio,
-  SiTypescript,
-} from "react-icons/si";
-import { RiNextjsFill } from "react-icons/ri";
-
-const currentSkills = [
-  {
-    id: "1",
-    name: "Javascript",
-    src: <IoLogoJavascript />,
-  },
-  {
-    id: "2",
-    name: "Typescript",
-    src: <SiTypescript />,
-  },
-  {
-    id: "3",
-    name: "React",
-    src: <FaReact />,
-  },
-  {
-    id: "4",
-    name: "Angular",
-    src: <FaAngular />,
-  },
-  {
-    id: "5",
-    name: "NodeJS",
-    src: <FaNodeJs />,
-  },
-  {
-    id: "6",
-    name: "Express",
-    src: <SiExpress />,
-  },
-  {
-    id: "7",
-    name: "Python",
-    src: <FaPython />,
-  },
-  {
-    id: "8",
-    name: "Twilio",
-    src: <SiTwilio />,
-  },
-  {
-    id: "9",
-    name: "ShadCN",
-    src: <SiShadcnui />,
-  },
-  {
-    id: "10",
-    name: "Tailwind",
-    src: <SiTailwindcss />,
-  },
-  {
-    id: "11",
-    name: "NextJS",
-    src: <RiNextjsFill />,
-  },
-  {
-    id: "12",
-    name: "MySQL",
-    src: <SiMysql />,
-  },
-  {
-    id: "13",
-    name: "PostgreSQL",
-    src: <SiPostgresql />,
-  },
-  {
-    id: "14",
-    name: "Docker",
-    src: <SiDocker />,
-  },
-];
-import { cn } from "@/lib/utils"; // ShadCN's `cn` utility for conditional classes
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import React, { useEffect, useRef } from "react";
+import { Card, CardContent } from "./ui/card";
+import { currentSkills } from "@/app/data/skills";
 
 export default function Skills() {
   const scrollRef = useRef(null);
@@ -95,34 +17,49 @@ export default function Skills() {
     const container = scrollRef.current;
 
     if (container) {
-      // Duplicate content to create infinite scrolling effect
       container.innerHTML += container.innerHTML;
     }
   }, []);
+
   return (
-    <div className="overflow-hidden relative">
+    <div className="overflow-hidden relative mx-auto">
       <section className="pt-4 pb-12 xl:pt-0 xl:pb-0 mb-10">
         <div className="container mx-auto">
-          <div
-            className="flex flex-wrap gap-6 max-w-[80vw] 
-        xl:max-w-none mx-auto"
-          >
-            <h2 className="h2">
-              <span className="text-skin-base">Skills</span>
-            </h2>
-            <section className="flex w-full relative">
-              <div ref={scrollRef} className="flex animate-scroll gap-4">
-                {currentSkills?.map((skill) => (
-                  <div
-                    key={`clone-${skill.id}`}
-                    className="flex flex-col items-center border rounded-xl p-10 shadow-md "
-                  >
-                    <span className="text-lg font-xl">{skill.name}</span>
-                    <span className="text-muted-foreground font-3xl text-6xl">
-                      {skill.src}
-                    </span>
-                  </div>
-                ))}
+          <div className="flex flex-col items-center">
+            <section className="py-8 px-2 sm:px-4 bg-muted w-full" id="skills">
+              <div className="w-full sm:max-w-4xl lg:max-w-6xl mx-auto">
+                <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12 text-foreground">
+                  <span className="text-skin-base">Technical Skills</span>
+                </h2>
+                <Carousel
+                  opts={{
+                    align: "start",
+                    loop: true,
+                  }}
+                  className=" max-w-[20rem] ml-4 sm:w-full"
+                >
+                  <CarouselContent className="flex gap-4">
+                    {currentSkills.map((skill) => (
+                      <CarouselItem
+                        key={skill.id}
+                        className="basis-[40%] sm:basis-[45%] md:basis-[30%] lg:basis-[20%] flex-shrink-0 transition-transform duration-300"
+                      >
+                        <Card className="px-2 sm:px-2 sm:py-6 border rounded-xl shadow-md bg-card my-2 sm:my-4">
+                          <CardContent className="flex flex-col items-center justify-center px-1 sm:px-4">
+                            <div className="text-3xl sm:text-4xl">
+                              {skill.src}
+                            </div>
+                            <h3 className="text-sm sm:text-base lg:text-lg font-semibold text-foreground text-center mt-2">
+                              {skill.name}
+                            </h3>
+                          </CardContent>
+                        </Card>
+                      </CarouselItem>
+                    ))}
+                  </CarouselContent>
+                  <CarouselPrevious />
+                  <CarouselNext />
+                </Carousel>
               </div>
             </section>
           </div>

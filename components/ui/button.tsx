@@ -10,16 +10,15 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default: "bg-skin-fill  text-skin-secondary hover:bg-skin-hover-fill",
-        primary: "bg-primary text-white",
+        primary: "bg-primary text-white/10 ",
         outline:
-        "border border-skin-base bg-primary text-skin-base hover:bg-skin-hover-fill hover:text-skin-secondary",
-          // "border border-accent bg-transparent text-accent hover:bg-accent hover:text-primary",
+          "border border-skin-base bg-primary text-skin-base hover:bg-skin-hover-fill hover:text-skin-secondary",
+        // "border border-accent bg-transparent text-accent hover:bg-accent hover:text-primary",
       },
       size: {
         default: "h-[44px] px-6 ",
         md: "h-[48px] px-6 ",
         lg: "h-[56px] px-8 text-sm uppercase tracking-[2px]",
-        
       },
     },
     defaultVariants: {

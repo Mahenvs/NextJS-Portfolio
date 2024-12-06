@@ -1,4 +1,6 @@
+"use client";
 import Photo from "@/components/Photo";
+import ResumePopup from "@/components/ResumeViewer";
 import Skills from "@/components/Skills";
 import Social from "@/components/Social";
 import Stats from "@/components/Stats";
@@ -7,8 +9,8 @@ import { FiDownload } from "react-icons/fi";
 export default function Home() {
   return (
     <>
-      <section className="h-full">
-        <div className="container mx-auto h-full">
+      <section className="h-screen">
+        <div className="container mx-auto ">
           <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
             <div className="text-center xl:text-left order-2 xl:order-none">
               <span className="text-xl">Software Developer</span>
@@ -20,14 +22,7 @@ export default function Home() {
                 {`I'm a passionate Full Stack Developer with experience in building dynamic and responsive web applications.`}
               </p>
               <div className="flex flex-col xl:flex-row items-center gap-8">
-                <Button
-                  variant={"outline"}
-                  size={"lg"}
-                  className="uppercase flex items-center gap-2"
-                >
-                  <span>Download CV</span>
-                  <FiDownload className="text-xl" />
-                </Button>
+                <ResumePopup />
                 <div className="mb-8 xl:mb-0">
                   <Social
                     containerStyles={"flex gap-6"}

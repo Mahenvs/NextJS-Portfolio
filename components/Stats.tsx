@@ -7,14 +7,6 @@ const stats = [
     num: 4,
     text: "Years of experience",
   },
-  // {
-  //   num: 6,
-  //   text: "Projects Completed",
-  // },
-  {
-    num: 7,
-    text: "Technologies Mastered",
-  },
   {
     num: 302,
     text: " Commits in 2024",
@@ -22,17 +14,21 @@ const stats = [
 ];
 const Stats = () => {
   const getData = async () => {
-    const data = await fetch(
-      "https://github-readme-stats.vercel.app/api?username=mahenvs"
-    );
-    const result = await data.json();
-    console.log(result);
+    try {
+      const data = await fetch(
+        "https://github-readme-stats.vercel.app/api?username=mahenvs"
+      );
+      const result = await data.json();
+      console.log(result);
+    } catch (error) {
+      console.error(error);
+    }
   };
   useEffect(() => {
     getData();
   }, []);
   return (
-    <section className="pt-4 pb-12 xl:pt-0 xl:pb-0 mb-10">
+    <section className="xl:pt-0 xl:pb-0">
       <div className="container mx-auto">
         <div
           className="flex flex-wrap gap-6 max-w-[80vw] 
@@ -44,8 +40,8 @@ const Stats = () => {
                 key={item.text}
                 className="
             flex-1 
-            flex items-center gap-4 justify-center 
-            xl:justify-start "
+            flex sm:flex-col sm:mx-auto gap-4 justify-center 
+             "
               >
                 <CountUp
                   end={item.num}
