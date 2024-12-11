@@ -26,7 +26,7 @@ const ResumePopup = () => {
       document.body.removeChild(a);
       window.URL.revokeObjectURL(url);
     } catch (error) {
-      setError(error.message);
+      console.error(error);
     } finally {
       setLoading(false);
     }
