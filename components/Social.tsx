@@ -1,6 +1,17 @@
 import Link from "next/link";
 import React from "react";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
+type SocialItem = {
+  id: number;
+  name: string;
+  icon: React.ReactNode;
+  url: string;
+};
+
+type SocialProps = {
+  containerStyles?: string;
+  iconStyles?: string;
+};
 const socials = [
   {
     icon: <FaGithub />,
@@ -11,7 +22,8 @@ const socials = [
     path: "https://www.linkedin.com/in/mahendrau044/",
   },
 ];
-const Social = ({ containerStyles, iconStyles }) => {
+
+const Social = ({ containerStyles, iconStyles }: SocialProps) => {
   return (
     <div className={containerStyles}>
       {socials.map((item, _) => {
