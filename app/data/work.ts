@@ -6,10 +6,11 @@ export const workExperience = [
         joinDate: "November 2021",
         leaveDate: "April 2023",
         details: [
-            "Developed and maintained scalable web applications using React and Node.js.",
+            "Developed and maintained scalable web applications using React",
+            "Implemented efficient state management using Context API and Redux Toolkit for clean, scalable, and maintainable code.",
             "Collaborated with cross-functional teams to deliver high-quality software.",
             "Optimized application performance, reducing load times by 30%.",
-            "Led the migration of legacy systems to modern architectures.",
+            "Involved in the migration of legacy systems to modern architectures.",
             "Implemented CI/CD pipelines to streamline deployments.",
         ],
     },
@@ -21,10 +22,11 @@ export const workExperience = [
         leaveDate: "November 2021",
         details: [
             "Designed and developed RESTful APIs using NodeJS.",
-            "Automated testing frameworks using Selenium and JUnit.",
             "Worked closely with clients to gather and refine requirements.",
-            "Conducted code reviews to ensure code quality and adherence to standards.",
-            "Mentored junior developers in the team.",
+            "Designed admin and supervisor views to enable agent management and detailed reporting.",
+            "Implemented secure authentication/authorization protocols tailored for agents, supervisors, and admins.",
+            "Added auto log-out triggered by browser tab/window closure to enhance system security.",
+            "Improved system stability and security, ensuring seamless daily operations for call center agents, supervisors, and admins."
         ],
     },
 ];

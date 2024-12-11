@@ -20,11 +20,12 @@ const skills = [
       "Express JS",
       "Bootstrap",
       "Angular",
+      "GraphQL",
     ],
   },
   {
     category: "Databases",
-    items: ["MySQL", "PostgreSQL", "MongoDB", "GraphQL", "Prisma ORM", "Redis"],
+    items: ["MySQL", "PostgreSQL", "MongoDB", "Prisma ORM", "Redis"],
   },
   {
     category: "Build and Deployment",

@@ -22,7 +22,7 @@ export default function Home() {
                 {`I'm a passionate Full Stack Developer with experience in building dynamic and responsive web applications.`}
               </p>
               <div className="flex flex-col xl:flex-row items-center gap-8">
-                {/* <ResumePopup /> */}
+                <ResumePopup />
                 <div className="mb-8 xl:mb-0">
                   <Social
                     containerStyles={"flex gap-6"}

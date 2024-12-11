@@ -40,7 +40,7 @@ const Stats = () => {
                 key={item.text}
                 className="
             flex-1 
-            flex sm:flex-col sm:mx-auto gap-4 justify-center 
+            flex lg:fle x-col items-center sm:mx-auto gap-4 justify-center 
              "
               >
                 <CountUp

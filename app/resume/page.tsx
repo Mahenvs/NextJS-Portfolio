@@ -45,11 +45,12 @@ const skills = [
       "Express JS",
       "Bootstrap",
       "Angular",
+      "GraphQL",
     ],
   },
   {
     category: "Databases",
-    items: ["MySQL", "PostgreSQL", "MongoDB", "GraphQL", "Prisma ORM", "Redis"],
+    items: ["MySQL", "PostgreSQL", "MongoDB", "Prisma ORM", "Redis"],
   },
   {
     category: "Build and Deployment",
@@ -57,7 +58,7 @@ const skills = [
   },
   {
     category: "Testing",
-    items: ["Jest", "Mocha", "Selenium", "Cypress", "SonarQube"],
+    items: ["Jest", "Mocha", "Cypress", "SonarQube"],
   },
   {
     category: "Development Tools",
@@ -65,7 +66,7 @@ const skills = [
   },
   {
     category: "Communication Tools",
-    items: ["Slack", "Microsoft Teams", "Zoom", "Trello", "Jira"],
+    items: ["Slack", "Microsoft Teams", "Zoom", "Jira"],
   },
   {
     category: "Operating Systems",
@@ -153,10 +154,10 @@ const page = () => {
             {education.map((edu) => (
               <Card
                 key={edu.institution}
-                className="w-[400px] flex flex-col mb-3 gap-2 rounded-xl"
+                className="w-[600px] flex flex-col mb-3 gap-2 rounded-xl"
               >
                 <span className="text-skin-base">{edu.year}</span>
-                <h3 className="text-xl max-w-[260px] text-start font-bold">
+                <h3 className="text-xl max-w-[600px] text-start font-bold">
                   {edu.degree}
                 </h3>
                 <span>{edu.institution}</span>
@@ -199,7 +200,11 @@ const page = () => {
               <h1 className="text-2xl text-skin-base font-bold mb-4 place-content-start content-start ">
                 About Me
               </h1>
-              <p className="mt-2">{about}</p>
+              <p className="mt-2">
+                <Card className="w-[800px] flex flex-col mb-3 gap-2 rounded-xl">
+                  {about}
+                </Card>
+              </p>
             </div>
           </TabsContent>
         </Tabs>
