@@ -129,7 +129,7 @@ const page = () => {
               return (
                 <Card
                   key={exp.company}
-                  className="w-[400px]  flex flex-col mb-3  gap-2 rounded-xl"
+                  className="w-[400px] lg:w-[400px]  flex flex-col mb-3  gap-2 rounded-xl"
                 >
                   <span className=" text-skin-base">
                     {exp.startYear} - {exp.endYear}
@@ -154,7 +154,7 @@ const page = () => {
             {education.map((edu) => (
               <Card
                 key={edu.institution}
-                className="w-[600px] flex flex-col mb-3 gap-2 rounded-xl"
+                className="w-[400px] lg:w-[600px] flex flex-col mb-3 gap-2 rounded-xl"
               >
                 <span className="text-skin-base">{edu.year}</span>
                 <h3 className="text-xl max-w-[600px] text-start font-bold">
@@ -171,7 +171,7 @@ const page = () => {
                 My Skills
               </h1>
             </div>
-            <div className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 sm:gap-4">
+            <div className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-4">
               {skills.map((skillCategory) => (
                 <Card
                   key={skillCategory.category}
@@ -201,7 +201,7 @@ const page = () => {
                 About Me
               </h1>
               <p className="mt-2">
-                <Card className="w-[800px] flex flex-col mb-3 gap-2 rounded-xl">
+                <Card className="w-[400px] text-justify lg:w-[800px] flex flex-col mb-3 gap-2 rounded-xl">
                   {about}
                 </Card>
               </p>

@@ -13,7 +13,6 @@ const buttonVariants = cva(
         primary: "bg-primary text-white/10 ",
         outline:
           "border border-skin-base bg-primary text-skin-base hover:bg-skin-hover-fill hover:text-skin-secondary",
-        // "border border-accent bg-transparent text-accent hover:bg-accent hover:text-primary",
       },
       size: {
         default: "h-[44px] px-6 ",
