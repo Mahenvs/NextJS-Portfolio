@@ -9,29 +9,26 @@ const page = () => {
         <h1 className="text-3xl font-bold text-white mb-8">Work Experience</h1>
         <div className="grid grid-cols-1 gap-6">
           {workExperience.map((job) => (
-            <Card
-              key={job.companyName}
-              className="p-6 rounded-xl shadow-lg bg-white"
-            >
+            <Card key={job.companyName} className="p-6 rounded-xl shadow-lg ">
               <div className="flex justify-between mb-4">
                 <div>
                   <h2 className=" text-2xl text-skin-base font-semibold">
                     {job.companyName}
                   </h2>
-                  <p className="font-semibold text-gray-600">{job.duties}</p>
+                  <p className="font-semibold text-white/90">{job.duties}</p>
                 </div>
                 <div className="text-right">
-                  <p className="text-sm font-medium text-gray-500">
+                  <p className="hidden sm:block text-sm font-medium text-gray-100">
                     {job.location}
                   </p>
-                  <p className="text-sm text-gray-500">
+                  <p className="hidden sm:block text-sm text-gray-100">
                     {job.joinDate} - {job.leaveDate}
                   </p>
                 </div>
               </div>
               <ul className="list-disc list-inside space-y-2">
                 {job.details.map((detail, index) => (
-                  <li key={index} className="text-gray-700 text-sm">
+                  <li key={index} className="text-white/90 text-sm">
                     {detail}
                   </li>
                 ))}
