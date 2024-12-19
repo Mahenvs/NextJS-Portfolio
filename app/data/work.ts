@@ -33,17 +33,17 @@ export const workExperience = [
 
 export const personalWork = [
     {
-        // jobTitle: "",
-        companyName: "CITIUSTECH PRIVATE LIMITED",
-        location: "Hyderabad, India",
-        joinDate: "November 2021",
-        leaveDate: "April 2023",
+        companyName: "Dynamic Shop Portal",
         details: [
-            "Developed and maintained scalable web applications using React and Node.js.",
-            "Collaborated with cross-functional teams to deliver high-quality software.",
-            "Optimized application performance, reducing load times by 30%.",
-            "Led the migration of legacy systems to modern architectures.",
-            "Implemented CI/CD pipelines to streamline deployments.",
+            `Developed an e-commerce platform clone using React styled with Tailwind CSS enabling small businesses to efficiently create and manage online stores. Implemented core features including product listings, shopping carts, and user authentication, with a focus on user-friendly interfaces to reduce technical complexity for sellers. Built an admin portal to manage shop creation, providing administrators with tools to oversee and support the platform's operations. `
         ],
+        link: "https://shopcustomerportal.netlify.app/mcdonald288792/"
+    },
+    {
+        companyName: "Chat Application End to End",
+        details: [
+            `Designed and developed a high-performance, real-time chat application using Next.js focused on one-to-one messaging. Implemented WebSocket-based communication in Node.js for instant message delivery and real-time status updates. Integrated PostgreSQL with Prisma ORM, optimizing lean data models for efficient database management. Implemented Zustand for efficient state management and integrated NextAuth for secure user authentication and session management, ensuring data protection and streamlined user access control in the application.`
+        ],
+        link: "https://chat-app-phi-nine-51.vercel.app/"
     },
 ];

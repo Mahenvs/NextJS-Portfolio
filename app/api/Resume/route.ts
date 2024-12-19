@@ -3,10 +3,10 @@
 import { NextResponse } from "next/server";
 export async function GET(params: any) {
   try {
-    const fileId = "14qWDAlcXlCATsaQYFYb8sMy_quxaeb6S";
+    const fileId = "1LlcoRlTS_nQ9NNxUzumGOVO2DqcRM_NS";
     const url = `https://drive.google.com/uc?export=download&id=${fileId}`;
-
     const response = await fetch(url);
+    // https://drive.google.com/file/d/1LlcoRlTS_nQ9NNxUzumGOVO2DqcRM_NS/view?usp=sharing    const response = await fetch(url);
     if (!response.ok) {
       throw new Error("Failed to fetch file.");
     }
