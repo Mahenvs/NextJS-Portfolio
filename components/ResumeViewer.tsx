@@ -33,7 +33,7 @@ const ResumePopup = () => {
   };
   return (
     <div>
-      <Button
+      {/* <Button
         variant={"outline"}
         size={"lg"}
         onClick={downloadResume}
@@ -42,7 +42,7 @@ const ResumePopup = () => {
       >
         <span>Download Resume</span>
         <FiDownload className="text-xl" />
-      </Button>
+      </Button> */}
     </div>
   );
 };
