@@ -8,13 +8,17 @@ export const links = [
     name: "home",
     path: "/",
   },
+  // {
+  //   name: "Resume",
+  //   path: "/resume",
+  // },
+  // {
+  //   name: "work",
+  //   path: "/work",
+  // },
   {
-    name: "Resume",
-    path: "/resume",
-  },
-  {
-    name: "work",
-    path: "/work",
+    name: "posts",
+    path: "/posts",
   },
   // {
   //   name: "about",
