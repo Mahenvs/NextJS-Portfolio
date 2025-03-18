@@ -13,14 +13,24 @@ const page = () => {
       <div className="container mx-auto">
         <h1 className="text-3xl font-bold text-white mb-8">Articles</h1>
         <div className="grid grid-cols-1 gap-6">
-          {posts.map((post) => (
-            <Card key={post.title} className="p-6 rounded-xl shadow-lg ">
+          {posts?.map((post) => (
+            <Card
+              key={post.title}
+              className="p-6 rounded-xl shadow-lg align-middle items-center"
+            >
               <div className="flex justify-between mb-4">
                 <div className="flex gap-6 align-middle items-center">
                   <h2 className="flex  text-2xl gap-10 text-skin-base font-semibold">
-                    {post.title}
+                    <Link
+                      href={post.article}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="justify-end no-underline  text-white/90"
+                    >
+                      {post.title}
+                    </Link>
                   </h2>
-                  <div className="gap-4 flex items-center  flex-row">
+                  <div className="gap-4 flex items-center  flex-row mt-1">
                     <h2 className="">
                       <Link
                         href={post.link}

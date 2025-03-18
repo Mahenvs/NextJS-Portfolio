@@ -44,7 +44,7 @@ const page = () => {
           ))}
         </div>
 
-        <h1 className="text-3xl font-bold text-white my-8">Work Experience</h1>
+        {/* <h1 className="text-3xl font-bold text-white my-8">Work Experience</h1>
         <div className="grid grid-cols-1 gap-6">
           {workExperience.map((job) => (
             <Card key={job.companyName} className="p-6 rounded-xl shadow-lg ">
@@ -75,7 +75,7 @@ const page = () => {
               </ul>
             </Card>
           ))}
-        </div>
+        </div> */}
       </div>
     </div>
   );

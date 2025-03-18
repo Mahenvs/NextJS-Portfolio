@@ -40,6 +40,13 @@ export const personalWork = [
     link: "https://shopcustomerportal.netlify.app/mcdonald288792/",
   },
   {
+    companyName: "Netflix Clone",
+    details: [
+      `Designed and developed the homepage of a Netflix clone, integrating movie APIs with the client application. The app supports multiple languages, fetches and plays trailers for displayed movies, and includes a search feature to find and play movie trailers. Built using React and ShadCN.`,
+    ],
+    link: "https://playnow-video-stream.netlify.app/",
+  },
+  {
     companyName: "Chat Application End to End",
     details: [
       `Designed and developed a high-performance, real-time chat application using Next.js focused on one-to-one messaging. Implemented WebSocket-based communication in Node.js for instant message delivery and real-time status updates. Integrated PostgreSQL with Prisma ORM, optimizing lean data models for efficient database management. Implemented Zustand for efficient state management and integrated NextAuth for secure user authentication and session management, ensuring data protection and streamlined user access control in the application.`,
