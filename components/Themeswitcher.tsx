@@ -11,11 +11,6 @@ const Themeswitcher = ({ children }: { children: React.ReactNode }) => {
   }, []);
   useEffect(() => {
     const timeout = setTimeout(() => {
-      // console.log(Math.random());
-      // console.log(Math.random() * 3);
-      // console.log(Math.floor(Math.random() * 3));
-      // console.log(Math.ceil(Math.random() * 3));
-
       const random = Math.floor(Math.random() * 3);
       let themeGenerated = localStorage.setItem("theme", "red");
 

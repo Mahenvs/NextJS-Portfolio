@@ -1,6 +1,5 @@
 import React from "react";
 import { Card } from "@/components/ui/card";
-import { workExperience } from "../data/work";
 import { posts } from "../data/work";
 import { GrDeploy } from "react-icons/gr";
 import { IoReaderOutline } from "react-icons/io5";

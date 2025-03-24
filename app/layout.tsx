@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import PageTransition from "@/components/PageTransition";
 import StairTransition from "@/components/StairTransition";
 import Themeswitcher from "@/components/Themeswitcher";
+import LoadingIndicator from "@/components/LoadingIndicator";
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
@@ -13,7 +14,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "MaheU",
+  title: "Mahendra Uppari",
   description: "Mahendra Portfolio",
 };
 
@@ -25,6 +26,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={jetbrainsMono.variable}>
+        <LoadingIndicator />
+
         <Themeswitcher>
           <Header />
           <PageTransition>{children}</PageTransition>

@@ -20,10 +20,10 @@ export const links = [
     name: "posts",
     path: "/posts",
   },
-  // {
-  //   name: "about",
-  //   path: "/about",
-  // },
+  {
+    name: "contact",
+    path: "/contact",
+  },
 ];
 const Nav = () => {
   const pathName = usePathname();

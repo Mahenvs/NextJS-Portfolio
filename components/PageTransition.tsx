@@ -1,28 +1,30 @@
 "use client";
-
-import React from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
+import { motion, AnimatePresence } from "framer-motion";
 
-interface PageTransitionProps {
-  children: React.ReactNode; // React.ReactNode is more specific and appropriate for React children
-}
+const PageTransition = ({ children }: { children: React.ReactNode }) => {
+  const pathname = usePathname(); // Works in App Router
+  const [isVisible, setIsVisible] = useState(true);
 
-const PageTransition: React.FC<PageTransitionProps> = ({ children }) => {
-  const pathname = usePathname();
+  useEffect(() => {
+    setIsVisible(false);
+    setTimeout(() => setIsVisible(true), 500); // Matches transition duration
+  }, [pathname]); // Runs when pathname changes
+
   return (
-    <AnimatePresence>
-      <div key={pathname}>
+    <AnimatePresence mode="wait">
+      {isVisible && (
         <motion.div
-          initial={{ opacity: 1 }}
-          animate={{
-            opacity: 0,
-            transition: { delay: 1, duration: 0.3, ease: "easeInOut" },
-          }}
-          className="h-screen  w-screen fixed bg-primary top-0 pointer-events-none"
-        />
-        {children}
-      </div>
+          key={pathname} // Ensures smooth transitions per route change
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          {children}
+        </motion.div>
+      )}
     </AnimatePresence>
   );
 };
