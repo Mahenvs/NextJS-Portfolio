@@ -8,6 +8,9 @@ import {
   SiMysql,
   SiPostgresql,
   SiDocker,
+  SiNginx,
+  SiAwsamplify,
+  SiMaterialdesign,
 } from "react-icons/si";
 import { FaReact, FaAngular, FaNodeJs, FaPython } from "react-icons/fa";
 import { RiNextjsFill } from "react-icons/ri";
@@ -46,13 +49,18 @@ export const currentSkills = [
   },
   {
     id: "7",
-    name: "Python",
-    src: <FaPython />,
+    name: "Material UI",
+    src: <SiMaterialdesign />,
   },
   {
     id: "8",
     name: "Twilio",
     src: <SiTwilio />,
+  },
+  {
+    id: "16",
+    name: "AWS",
+    src: <SiAwsamplify />,
   },
   {
     id: "9",
@@ -83,5 +91,15 @@ export const currentSkills = [
     id: "14",
     name: "Docker",
     src: <SiDocker />,
+  },
+  {
+    id: "15",
+    name: "NGINX",
+    src: <SiNginx />,
+  },
+  {
+    id: "16",
+    name: "AWS",
+    src: <SiAwsamplify />,
   },
 ];

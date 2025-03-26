@@ -1,44 +1,15 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Card, CardContent } from "./ui/card";
 import { currentSkills } from "@/app/data/skills";
-import { Button } from "./ui/button";
-import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function Skills() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const slidesToShow = 4;
-  const totalSlides = currentSkills.length;
-
-  const nextSlide = () => {
-    setCurrentIndex((prev) =>
-      prev + slidesToShow >= totalSlides ? 0 : prev + slidesToShow
-    );
-  };
-
-  const prevSlide = () => {
-    setCurrentIndex((prev) =>
-      prev - slidesToShow < 0 ? totalSlides - slidesToShow : prev - slidesToShow
-    );
-  };
-
-  useEffect(() => {
-    const interval = setInterval(nextSlide, 3000);
-    return () => clearInterval(interval);
-  }, []);
-
-  const visibleSkills = currentSkills.slice(
-    currentIndex,
-    currentIndex + slidesToShow
-  );
-
-  // If we don't have enough items to fill the last slide, wrap around to the beginning
-  if (visibleSkills.length < slidesToShow) {
-    visibleSkills.push(
-      ...currentSkills.slice(0, slidesToShow - visibleSkills.length)
-    );
-  }
-  const duplicatedSlides = [...currentSkills, ...currentSkills];
+  const slidesToShow = 10;
+  const duplicatedSlides = [
+    ...currentSkills,
+    ...currentSkills,
+    ...currentSkills,
+  ];
 
   return (
     <div className="overflow-hidden relative mx-auto py-10 bg-muted">
@@ -47,18 +18,15 @@ export default function Skills() {
           Technical Skills
         </h2>
 
-        <div className="w-full overflow-hidden">
+        <div className="w-full overflow-hidden relative">
           <div
-            className=" container mx-auto flex animate-slide-loop"
+            className="flex gap-4 animate-slide-loop"
             style={{
               width: `${duplicatedSlides.length * (100 / slidesToShow)}%`,
             }}
           >
             {duplicatedSlides.map((skill, index) => (
-              <div
-                key={index}
-                className={` flex-shrink-0 px-2`} // 4 slides visible = 25% each
-              >
+              <div key={index} className="flex-shrink-0 px-2">
                 <Card className="border rounded-xl shadow-md bg-card">
                   <CardContent className="flex flex-col items-center justify-center p-4">
                     <div className="text-4xl mb-2">{skill.src}</div>
