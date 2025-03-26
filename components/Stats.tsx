@@ -10,11 +10,11 @@ const Stats = () => {
     },
     {
       num: 0,
-      text: "Contributions in 2024",
+      text: "Commits in 2024",
     },
     {
       num: 0,
-      text: "Contributions in 2025",
+      text: "Commits in 2025",
     },
   ]);
   const [currentYear, setCurrentYear] = useState(2024);
